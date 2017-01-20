@@ -1,0 +1,138 @@
+[
+  {
+    xtype: 'fieldset',
+    html: 'Field Work Assignment',
+    styleHtmlContent: true,
+    style: 'padding:50px;border:0px;',
+    bodyStyle: 'padding:50px'
+  },
+  {
+    fieldLabel: 'First Name',
+    xtype: 'textfield',
+    name: 'first',
+    allowBlank: false,
+    value: 'Grace Cohen'
+  },
+  {
+    fieldLabel: 'Select Value',
+    xtype: 'label',
+    html: 'Colurs:',
+    style: 'text-align:center;position:relative;top:25%;'
+  },
+  {
+    xtype: 'container',
+    cls: 'x-list',
+    styleHtmlContent: true,
+    styleHtmlCls: 'x-list-header',
+    
+  },
+  {
+    fieldLabel: 'Select Value',
+    name: 'select',
+    xtype: 'combo',
+    store: [
+      [
+        'r',
+        'Reader'
+      ],
+      [
+        'p',
+        'Participant'
+      ],
+      [
+        'm',
+        'Moderator'
+      ],
+      [
+        's',
+        'SuperUser'
+      ]
+    ],
+    forceSelection: false,
+    editable: true,
+    typeAhead: true,
+    selectOnFocus: true
+  },
+  {
+    fieldLabel: 'Last Name',
+    name: 'last',
+    xtype: 'textfield',
+    readOnly: true
+  },
+  {
+    fieldLabel: 'Company',
+    name: 'company',
+    xtype: 'textfield'
+  },
+  {
+    xtype: "label",
+    html: 'question',
+    fieldLabel: '1Company',
+    name: 'company',
+    
+  },
+  {
+    xtype: 'component',
+    id: 'comp1',
+    autoEl: {
+      html: '<table cellpadding=\'0\' cellspacing=\'0\'><tr><td style=\'width: 150px;\'>Order:</td><td style=\'width: 50px; text-align: left;\'>value</td></tr></table>'
+    }
+  },
+  {
+    xtype: 'button',
+    height: 30,
+    width: '20',
+    autoEl: {
+      tag: 'center'
+    },
+    text: 'Add New Site',
+    handler: function(){
+      loadBlankTabPanel();
+    }
+  },
+  {
+    fieldLabel: 'Email',
+    name: 'email',
+    vtype: 'email',
+    xtype: 'textfield'
+  },
+  {
+    xtype: 'checkboxfield',
+    name: 'checkbox1',
+    fieldLabel: 'Checkbox',
+    boxLabel: 'box label'
+  },
+  {
+    xtype: 'radiofield',
+    name: 'radio1',
+    value: 'radiovalue1',
+    fieldLabel: 'Radio buttons',
+    boxLabel: 'radio 1'
+  },
+  {
+    xtype: 'radiofield',
+    name: 'radio1',
+    value: 'radiovalue2',
+    fieldLabel: '',
+    labelSeparator: '',
+    hideEmptyLabel: false,
+    boxLabel: 'radio 2'
+  },
+  {
+    fieldLabel: 'URL Link',
+    name: 'link',
+    xtype: 'component',
+    autoEl: {
+      tag: 'a',
+      href: 'http://google.com',
+      html: 'link'
+    }
+  },
+  {
+    xtype: 'timefield',
+    fieldLabel: 'Time',
+    name: 'time',
+    minValue: '8:00am',
+    maxValue: '6:00pm'
+  }
+]
